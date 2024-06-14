@@ -1,0 +1,17 @@
+1-Authenticate and Mount Google Drive
+
+    from google.colab import drive
+    drive.mount('/content/drive')
+
+This code will prompt you to authorize access to your Google Drive account
+
+2- Navigate to File
+Once your drive is mounted, you can navigate to your file. Use the following code to list the contents of your Google Drive:
+   !ls /content/drive/MyDrive
+
+3- Read the File
+Depending on the type of file you want to read, you can use different libraries
+Example:
+	file_path = '/content/drive/MyDrive/yourfile.csv' 
+  df = pd.read_csv(file_path)
+    …….
